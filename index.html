@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendence Response Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="m-0 p-4">
+    <div class="bg-gray-300 rounded-lg w-full h-[850px] flex-col space-y-5">
+        <div class="pl-4 pr-8 pt-4">
+            <!-- this is the image of techno india University -->
+            <img src="https://th.bing.com/th/id/R.4a22bf6560408ac1e1fe5f1fbbb0c81a?rik=vk%2fH17Djc463Zw&riu=http%3a%2f%2fwww.tigmis.com%2ftiu%2fadmission%2fpic%2ftig-logo-black.png&ehk=53dztdkcK70JmT%2f5d0E%2bd1%2fywn1vCkT6M9ZIZB%2b4t2Q%3d&risl=&pid=ImgRaw&r=0" alt="Techno India University Logo!">
+        </div>
+
+        <div class="px-4">
+            <!-- This is the place where the form is -->
+            <div class="bg-gray-400 rounded-lg w-full h-[720px] p-4">
+                <h1 class="font-bold text-2xl item-center w-full mb-4 flex justify-center text-white">Attendence Sheet</h1>
+
+                <form action="" method="get" class="flex-col space-y-4">
+                    <label for="name" class="">
+                        <span class="px-1 font-bold uppercase text-white">Name</span>
+                        <input type="text" id="name" placeholder="Name" class="w-full px-2 py-2 rounded-lg uppercase font-semibold text-gray-500">
+                    </label>
+
+                    <div>
+                        <!-- This div stores the data for courses -->
+                        <p class="px-1 font-bold uppercase text-white">Course</p>
+                        <select name="course" id="course" class="w-full px-2 py-2 rounded-lg bg-white font-semibold text-gray-500">
+                            <option value="null" class="font-bold">-----SELECT-----</option>
+                            <option value="BCA">Bachelor of Computer Applicatons (BCA)</option>
+                            <option value="BTECH">Bachelor of Technology (BTECH)</option>
+                            <option value="BSC">Bachelor of Science (BSC)</option>
+                            <option value="BCOM">Bachelor of Commerce (BCOM)</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <!-- This div stores the data for student ID -->
+                        <p class="px-1 font-bold uppercase text-white">Student ID</p>
+                        <input type="text" inputmode="numeric" placeholder="Student ID(last 4 digits)" class="w-full px-2 py-2 rounded-lg uppercase font-semibold text-gray-500">
+                    </div>
+
+                    <div>
+                        <!-- This is the div that stores the data for section -->
+                        <p class="px-1 font-bold uppercase text-white">Section</p>
+                        <input type="text" id="section" placeholder="Section" class="w-full px-2 py-2 rounded-lg uppercase font-semibold text-gray-500">
+                    </div>
+
+                    <div>
+                        <!-- This div stores the data for current date -->
+                        <p class="px-1 font-bold uppercase text-white">Date</p>
+                        <div id="currentDate" class="bg-white rounded-lg p-2 font-semibold text-gray-500"></div>
+                    </div>
+
+                    <div>
+                        
+                        <p class="px-1 font-bold uppercase text-white">Class</p>
+                        <input type="text" placeholder="Class" class="w-full px-2 py-2 rounded-lg uppercase font-semibold text-gray-500">
+                    </div>
+
+                    <div>
+                        <p class="px-1 font-bold uppercase text-white">Room No</p>
+                        <input type="text" placeholder="Room No" class="w-full px-2 py-2 rounded-lg uppercase font-semibold text-gray-500">
+                    </div>
+
+                    <div class="pt-5">
+                        <button class="w-full p-3 text-xl bg-red-600 hover:bg-red-600 text-white font-semibold rounded-lg">Submit</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // JavaScript code to display the current date
+        const currentDateElement = document.getElementById('currentDate');
+        const currentDate = new Date();
+
+        // Format the date as desired (e.g., 'MM/DD/YYYY')
+        const formattedDate = `${currentDate.getMonth() + 1}/${currentDate.getDate()}/${currentDate.getFullYear()}`;
+
+        // Set the content of the paragraph element to the formatted date
+        currentDateElement.textContent = `${formattedDate}`;
+
+    </script>
+</body>
+</html>
