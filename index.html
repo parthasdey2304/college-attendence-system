@@ -39,7 +39,7 @@
                     <div class="flex-col md:space-y-2">
                         <!-- This div stores the data for student ID -->
                         <p class="px-1 font-bold uppercase text-white md:text-3xl">Student ID</p>
-                        <input type="text" inputmode="numeric" placeholder="Student ID(last 4 digits)" class="w-full p-2 md:p-4 rounded-lg uppercase font-semibold text-gray-500 md:text-3xl" required>
+                        <input type="text" inputmode="numeric" id="student_id" placeholder="Student ID(last 4 digits)" class="w-full p-2 md:p-4 rounded-lg uppercase font-semibold text-gray-500 md:text-3xl" required>
                     </div>
 
                     <div class="flex-col md:space-y-2">
@@ -57,13 +57,13 @@
                     <div class="flex-col md:space-y-2">
                         <!-- This div stores the data of the class -->
                         <p class="px-1 font-bold uppercase text-white md:text-3xl">Class</p>
-                        <input type="text" placeholder="Class" class="w-full p-2 md:p-4 rounded-lg uppercase font-semibold text-gray-500 md:text-3xl">
+                        <input type="text" id="class" placeholder="Class" class="w-full p-2 md:p-4 rounded-lg uppercase font-semibold text-gray-500 md:text-3xl">
                     </div>
 
                     <div class="flex-col md:space-y-2">
                         <!-- This div stores the data about the room number -->
                         <p class="px-1 font-bold uppercase text-white md:text-3xl">Room No</p>
-                        <input type="text" placeholder="Room No" class="w-full p-2 md:p-4 rounded-lg uppercase font-semibold text-gray-500 md:text-3xl">
+                        <input type="text" id="room_no" placeholder="Room No" class="w-full p-2 md:p-4 rounded-lg uppercase font-semibold text-gray-500 md:text-3xl">
                     </div>
 
                     <div class="pt-5">
@@ -90,7 +90,16 @@
         const button_submit = document.getElementById('submit')
 
         button_submit.addEventListener('click', () => {
-            alert('Your Response has been submitted!!')
+            var name = document.getElementById("name").value;
+            var student_id = document.getElementById("student_id").value;
+            var section = document.getElementById("section").value;
+            var classes = document.getElementById("class").value;
+
+            if(name != "" && student_id != "" && section != "" && classes != "")
+            alert('Your Response has been submitted!!');
+
+            else
+            alert("Enter all the details first!");
         })
 
     </script>
