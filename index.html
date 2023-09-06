@@ -6,28 +6,28 @@
     <title>Attendence Response Form</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="m-0 p-4 md:px-44">
-    <div class="bg-gray-300 rounded-lg w-full h-[850px] md:h-[960px] flex-col space-y-5">
-        <div class="pl-4 pr-8 pt-4 md:flex justify-center">
+<body class="m-0 p-4 md:pt-10 md:h-[1800px] flex justify-center md:bg-gray-500">
+    <div class="bg-gray-300 rounded-lg md:rounded-3xl w-full md:w-[1000px] h-[850px] md:h-[1680px] flex-col space-y-5">
+        <div class="pl-4 pr-8 pt-4 md:py-10 md:flex justify-center">
             <!-- this is the image of techno india University -->
-            <img src="https://th.bing.com/th/id/R.4a22bf6560408ac1e1fe5f1fbbb0c81a?rik=vk%2fH17Djc463Zw&riu=http%3a%2f%2fwww.tigmis.com%2ftiu%2fadmission%2fpic%2ftig-logo-black.png&ehk=53dztdkcK70JmT%2f5d0E%2bd1%2fywn1vCkT6M9ZIZB%2b4t2Q%3d&risl=&pid=ImgRaw&r=0" alt="Techno India University Logo!" class="md:w-1/2">
+            <img src="https://th.bing.com/th/id/R.4a22bf6560408ac1e1fe5f1fbbb0c81a?rik=vk%2fH17Djc463Zw&riu=http%3a%2f%2fwww.tigmis.com%2ftiu%2fadmission%2fpic%2ftig-logo-black.png&ehk=53dztdkcK70JmT%2f5d0E%2bd1%2fywn1vCkT6M9ZIZB%2b4t2Q%3d&risl=&pid=ImgRaw&r=0" alt="Techno India University Logo!" class="md:w-2/3">
         </div>
 
-        <div class="px-4">
+        <div class="px-4 md:px-16">
             <!-- This is the place where the form is -->
-            <div class="bg-gray-400 rounded-lg w-full h-[720px] p-4">
-                <h1 class="font-bold text-2xl item-center w-full mb-4 flex justify-center text-white">Attendence Details</h1>
+            <div class="bg-gray-400 rounded-lg md:rounded-3xl w-full h-[1340px] p-4 md:p-10">
+                <h1 class="font-bold text-2xl md:text-5xl item-center w-full mb-4 flex justify-center text-white">Attendence Details</h1>
 
-                <form action="" method="get" class="flex-col space-y-4">
-                    <label for="name" class="">
-                        <span class="px-1 font-bold uppercase text-white">Name</span>
-                        <input type="text" id="name" placeholder="Name" class="w-full px-2 py-2 rounded-lg uppercase font-semibold text-gray-500" required autofocus>
+                <form action="" method="get" class="flex-col space-y-4 md:space-y-10">
+                    <label for="name" class="flex-col space-y-2">
+                        <span class="px-1 font-bold uppercase text-white md:text-3xl">Name</span>
+                        <input type="text" id="name" placeholder="Name" class="w-full p-2 md:p-4 rounded-lg uppercase font-semibold text-gray-500 md:text-3xl" required autofocus>
                     </label>
 
-                    <div>
+                    <div class="flex-col space-y-2">
                         <!-- This div stores the data for courses -->
-                        <p class="px-1 font-bold uppercase text-white">Course</p>
-                        <select name="course" id="course" class="w-full px-2 py-2 rounded-lg bg-white font-semibold text-gray-500" required>
+                        <p class="px-1 font-bold uppercase text-white md:text-3xl">Course</p>
+                        <select name="course" id="course" class="w-full p-2 md:p-4 rounded-lg bg-white font-semibold text-gray-500 md:text-3xl" required>
                             <option value="null" class="font-bold">-----SELECT-----</option>
                             <option value="BCA">Bachelor of Computer Applicatons (BCA)</option>
                             <option value="BTECH">Bachelor of Technology (BTECH)</option>
@@ -36,38 +36,38 @@
                         </select>
                     </div>
 
-                    <div>
+                    <div class="flex-col space-y-2">
                         <!-- This div stores the data for student ID -->
-                        <p class="px-1 font-bold uppercase text-white">Student ID</p>
-                        <input type="text" inputmode="numeric" placeholder="Student ID(last 4 digits)" class="w-full px-2 py-2 rounded-lg uppercase font-semibold text-gray-500" required>
+                        <p class="px-1 font-bold uppercase text-white md:text-3xl">Student ID</p>
+                        <input type="text" inputmode="numeric" placeholder="Student ID(last 4 digits)" class="w-full p-2 md:p-4 rounded-lg uppercase font-semibold text-gray-500 md:text-3xl" required>
                     </div>
 
-                    <div>
+                    <div class="flex-col space-y-2">
                         <!-- This is the div that stores the data for section -->
-                        <p class="px-1 font-bold uppercase text-white">Section</p>
-                        <input type="text" id="section" placeholder="Section" class="w-full px-2 py-2 rounded-lg uppercase font-semibold text-gray-500" required>
+                        <p class="px-1 font-bold uppercase text-white md:text-3xl">Section</p>
+                        <input type="text" id="section" placeholder="Section" class="w-full p-2 md:p-4 rounded-lg uppercase font-semibold text-gray-500 md:text-3xl" required>
                     </div>
 
-                    <div>
+                    <div class="flex-col space-y-2">
                         <!-- This div stores the data for current date -->
-                        <p class="px-1 font-bold uppercase text-white">Date</p>
-                        <div id="currentDate" class="bg-white rounded-lg p-2 font-semibold text-gray-500"></div>
+                        <p class="px-1 font-bold uppercase text-white md:text-3xl">Date</p>
+                        <div id="currentDate" class="bg-white rounded-lg p-2 md:p-4 font-semibold text-gray-500 md:text-3xl"></div>
                     </div>
 
-                    <div>
+                    <div class="flex-col space-y-2">
                         <!-- This div stores the data of the class -->
-                        <p class="px-1 font-bold uppercase text-white">Class</p>
-                        <input type="text" placeholder="Class" class="w-full px-2 py-2 rounded-lg uppercase font-semibold text-gray-500">
+                        <p class="px-1 font-bold uppercase text-white md:text-3xl">Class</p>
+                        <input type="text" placeholder="Class" class="w-full p-2 md:p-4 rounded-lg uppercase font-semibold text-gray-500 md:text-3xl">
                     </div>
 
-                    <div>
+                    <div class="flex-col space-y-2">
                         <!-- This div stores the data about the room number -->
-                        <p class="px-1 font-bold uppercase text-white">Room No</p>
-                        <input type="text" placeholder="Room No" class="w-full px-2 py-2 rounded-lg uppercase font-semibold text-gray-500">
+                        <p class="px-1 font-bold uppercase text-white md:text-3xl">Room No</p>
+                        <input type="text" placeholder="Room No" class="w-full p-2 md:p-4 rounded-lg uppercase font-semibold text-gray-500 md:text-3xl">
                     </div>
 
                     <div class="pt-5">
-                        <button class="w-full p-3 text-xl bg-red-600 hover:bg-red-600 text-white font-semibold rounded-lg" id="submit">Submit</button>
+                        <button class="w-full p-3 md:p-8 text-xl md:text-5xl bg-red-600 hover:bg-red-600 text-white font-semibold rounded-lg md:rounded-3xl" id="submit">Submit</button>
                     </div>
 
                 </form>
