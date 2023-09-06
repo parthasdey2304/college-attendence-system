@@ -6,7 +6,7 @@
     <title>Attendence Response Form</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="m-0 p-4 md:pt-10 md:h-[1800px] flex justify-center md:bg-gray-500">
+<body class="m-0 p-4 md:pt-10 md:h-[1800px] flex justify-center md:bg-gray-51   `00">
     <div class="bg-gray-300 rounded-lg md:rounded-3xl w-full md:w-[1000px] h-[850px] md:h-[1680px] flex-col space-y-5">
         <div class="pl-4 pr-8 pt-4 md:py-10 md:flex justify-center">
             <!-- this is the image of techno india University -->
@@ -15,16 +15,16 @@
 
         <div class="px-4 md:px-16">
             <!-- This is the place where the form is -->
-            <div class="bg-gray-400 rounded-lg md:rounded-3xl w-full h-[1340px] p-4 md:p-10">
+            <div class="bg-gray-400 rounded-lg md:rounded-3xl w-full md:h-[1340px] p-4 md:p-10">
                 <h1 class="font-bold text-2xl md:text-5xl item-center w-full mb-4 flex justify-center text-white">Attendence Details</h1>
 
                 <form action="" method="get" class="flex-col space-y-4 md:space-y-10">
-                    <label for="name" class="flex-col space-y-2">
+                    <label for="name" class="flex-col md:space-y-2">
                         <span class="px-1 font-bold uppercase text-white md:text-3xl">Name</span>
                         <input type="text" id="name" placeholder="Name" class="w-full p-2 md:p-4 rounded-lg uppercase font-semibold text-gray-500 md:text-3xl" required autofocus>
                     </label>
 
-                    <div class="flex-col space-y-2">
+                    <div class="flex-col md:space-y-2">
                         <!-- This div stores the data for courses -->
                         <p class="px-1 font-bold uppercase text-white md:text-3xl">Course</p>
                         <select name="course" id="course" class="w-full p-2 md:p-4 rounded-lg bg-white font-semibold text-gray-500 md:text-3xl" required>
@@ -36,31 +36,31 @@
                         </select>
                     </div>
 
-                    <div class="flex-col space-y-2">
+                    <div class="flex-col md:space-y-2">
                         <!-- This div stores the data for student ID -->
                         <p class="px-1 font-bold uppercase text-white md:text-3xl">Student ID</p>
                         <input type="text" inputmode="numeric" placeholder="Student ID(last 4 digits)" class="w-full p-2 md:p-4 rounded-lg uppercase font-semibold text-gray-500 md:text-3xl" required>
                     </div>
 
-                    <div class="flex-col space-y-2">
+                    <div class="flex-col md:space-y-2">
                         <!-- This is the div that stores the data for section -->
                         <p class="px-1 font-bold uppercase text-white md:text-3xl">Section</p>
                         <input type="text" id="section" placeholder="Section" class="w-full p-2 md:p-4 rounded-lg uppercase font-semibold text-gray-500 md:text-3xl" required>
                     </div>
 
-                    <div class="flex-col space-y-2">
+                    <div class="flex-col md:space-y-2">
                         <!-- This div stores the data for current date -->
                         <p class="px-1 font-bold uppercase text-white md:text-3xl">Date</p>
                         <div id="currentDate" class="bg-white rounded-lg p-2 md:p-4 font-semibold text-gray-500 md:text-3xl"></div>
                     </div>
 
-                    <div class="flex-col space-y-2">
+                    <div class="flex-col md:space-y-2">
                         <!-- This div stores the data of the class -->
                         <p class="px-1 font-bold uppercase text-white md:text-3xl">Class</p>
                         <input type="text" placeholder="Class" class="w-full p-2 md:p-4 rounded-lg uppercase font-semibold text-gray-500 md:text-3xl">
                     </div>
 
-                    <div class="flex-col space-y-2">
+                    <div class="flex-col md:space-y-2">
                         <!-- This div stores the data about the room number -->
                         <p class="px-1 font-bold uppercase text-white md:text-3xl">Room No</p>
                         <input type="text" placeholder="Room No" class="w-full p-2 md:p-4 rounded-lg uppercase font-semibold text-gray-500 md:text-3xl">
