@@ -6,11 +6,11 @@
     <title>Attendence Response Form</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="m-0 p-4">
-    <div class="bg-gray-300 rounded-lg w-full h-[850px] flex-col space-y-5">
-        <div class="pl-4 pr-8 pt-4">
+<body class="m-0 p-4 md:px-44">
+    <div class="bg-gray-300 rounded-lg w-full h-[850px] md:h-[960px] flex-col space-y-5">
+        <div class="pl-4 pr-8 pt-4 md:flex justify-center">
             <!-- this is the image of techno india University -->
-            <img src="https://th.bing.com/th/id/R.4a22bf6560408ac1e1fe5f1fbbb0c81a?rik=vk%2fH17Djc463Zw&riu=http%3a%2f%2fwww.tigmis.com%2ftiu%2fadmission%2fpic%2ftig-logo-black.png&ehk=53dztdkcK70JmT%2f5d0E%2bd1%2fywn1vCkT6M9ZIZB%2b4t2Q%3d&risl=&pid=ImgRaw&r=0" alt="Techno India University Logo!">
+            <img src="https://th.bing.com/th/id/R.4a22bf6560408ac1e1fe5f1fbbb0c81a?rik=vk%2fH17Djc463Zw&riu=http%3a%2f%2fwww.tigmis.com%2ftiu%2fadmission%2fpic%2ftig-logo-black.png&ehk=53dztdkcK70JmT%2f5d0E%2bd1%2fywn1vCkT6M9ZIZB%2b4t2Q%3d&risl=&pid=ImgRaw&r=0" alt="Techno India University Logo!" class="md:w-1/2">
         </div>
 
         <div class="px-4">
@@ -21,13 +21,13 @@
                 <form action="" method="get" class="flex-col space-y-4">
                     <label for="name" class="">
                         <span class="px-1 font-bold uppercase text-white">Name</span>
-                        <input type="text" id="name" placeholder="Name" class="w-full px-2 py-2 rounded-lg uppercase font-semibold text-gray-500">
+                        <input type="text" id="name" placeholder="Name" class="w-full px-2 py-2 rounded-lg uppercase font-semibold text-gray-500" required autofocus>
                     </label>
 
                     <div>
                         <!-- This div stores the data for courses -->
                         <p class="px-1 font-bold uppercase text-white">Course</p>
-                        <select name="course" id="course" class="w-full px-2 py-2 rounded-lg bg-white font-semibold text-gray-500">
+                        <select name="course" id="course" class="w-full px-2 py-2 rounded-lg bg-white font-semibold text-gray-500" required>
                             <option value="null" class="font-bold">-----SELECT-----</option>
                             <option value="BCA">Bachelor of Computer Applicatons (BCA)</option>
                             <option value="BTECH">Bachelor of Technology (BTECH)</option>
@@ -39,13 +39,13 @@
                     <div>
                         <!-- This div stores the data for student ID -->
                         <p class="px-1 font-bold uppercase text-white">Student ID</p>
-                        <input type="text" inputmode="numeric" placeholder="Student ID(last 4 digits)" class="w-full px-2 py-2 rounded-lg uppercase font-semibold text-gray-500">
+                        <input type="text" inputmode="numeric" placeholder="Student ID(last 4 digits)" class="w-full px-2 py-2 rounded-lg uppercase font-semibold text-gray-500" required>
                     </div>
 
                     <div>
                         <!-- This is the div that stores the data for section -->
                         <p class="px-1 font-bold uppercase text-white">Section</p>
-                        <input type="text" id="section" placeholder="Section" class="w-full px-2 py-2 rounded-lg uppercase font-semibold text-gray-500">
+                        <input type="text" id="section" placeholder="Section" class="w-full px-2 py-2 rounded-lg uppercase font-semibold text-gray-500" required>
                     </div>
 
                     <div>
@@ -55,18 +55,19 @@
                     </div>
 
                     <div>
-                        
+                        <!-- This div stores the data of the class -->
                         <p class="px-1 font-bold uppercase text-white">Class</p>
                         <input type="text" placeholder="Class" class="w-full px-2 py-2 rounded-lg uppercase font-semibold text-gray-500">
                     </div>
 
                     <div>
+                        <!-- This div stores the data about the room number -->
                         <p class="px-1 font-bold uppercase text-white">Room No</p>
                         <input type="text" placeholder="Room No" class="w-full px-2 py-2 rounded-lg uppercase font-semibold text-gray-500">
                     </div>
 
                     <div class="pt-5">
-                        <button class="w-full p-3 text-xl bg-red-600 hover:bg-red-600 text-white font-semibold rounded-lg">Submit</button>
+                        <button class="w-full p-3 text-xl bg-red-600 hover:bg-red-600 text-white font-semibold rounded-lg" id="submit">Submit</button>
                     </div>
 
                 </form>
@@ -85,6 +86,12 @@
 
         // Set the content of the paragraph element to the formatted date
         currentDateElement.textContent = `${formattedDate}`;
+
+        const button_submit = document.getElementById('submit')
+
+        button_submit.addEventListener('click', () => {
+            alert('Your Response has been submitted!!')
+        })
 
     </script>
 </body>
