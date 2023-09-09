@@ -1,18 +1,16 @@
 const express = require('express');
-const path = require('path');
-const port = 5500;
+const mongoose = require('mongoose');
 const app = express();
 
-app.get('/', (request, response) => {
-    response.sendFile(path.join(__dirname, 'index.html'));
+// Replace 'your-database-uri' with your actual MongoDB URI
+const mongoURI = 'mongodb://localhost:27017/your-database-name';
+
+// Add middleware and routes here
+app.get('/', (req, res) => {
+    res.sendFile("index.html")
 });
 
-app.get('/admin/dashboard', (request, response) => {
-    response.sendFile(path.join(__dirname, 'dashboard.html'));
-});
-
-app.use('/', express.static(path.join(__dirname, 'index.html')))
-
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
-    console.log("[INFO]Express App running on https://localhost:5500");
+  console.log(`Server is running on port ${port}`);
 });
